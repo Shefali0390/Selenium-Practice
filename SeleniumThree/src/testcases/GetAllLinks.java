@@ -3,6 +3,7 @@ package testcases;
 
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,7 @@ public class GetAllLinks {
 		
 		driver.get("https://www.automation.com/");
 		driver.manage().window().maximize();
-		Thread.sleep(9000);
+		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.findElement(By.name("allow")).click();
 		
